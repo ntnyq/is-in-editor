@@ -5,7 +5,7 @@
 [![CI](https://github.com/ntnyq/is-in-editor/workflows/CI/badge.svg)](https://github.com/ntnyq/is-in-editor/actions)
 [![NPM VERSION](https://img.shields.io/npm/v/is-in-editor.svg)](https://www.npmjs.com/package/is-in-editor)
 [![NPM DOWNLOADS](https://img.shields.io/npm/dy/is-in-editor.svg)](https://www.npmjs.com/package/is-in-editor)
-[![CODECOV](https://codecov.io/github/ntnyq/is-in-editor/branch/main/graph/badge.svg?token=2U07S1P2F2)](https://codecov.io/github/ntnyq/is-in-editor)
+[![CODECOV](https://codecov.io/github/ntnyq/is-in-editor/branch/main/graph/badge.svg)](https://codecov.io/github/ntnyq/is-in-editor)
 [![LICENSE](https://img.shields.io/github/license/ntnyq/is-in-editor.svg)](https://github.com/ntnyq/is-in-editor/blob/main/LICENSE)
 
 ## Install
