@@ -1,0 +1,82 @@
+{
+  "name": "is-in-editor",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.7.1",
+  "description": "Check if running in an editor",
+  "keywords": [
+    "check",
+    "vscode",
+    "ide",
+    "jetbrains"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "ntnyq",
+    "email": "ntnyq13@gmail.com"
+  },
+  "homepage": "https://github.com/ntnyq/is-in-editor#readme",
+  "bugs": {
+    "url": "https://github.com/ntnyq/is-in-editor/issues"
+  },
+  "repository": "ntnyq/is-in-editor",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "unbuild",
+    "coverage": "vitest --coverage",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepare": "husky install",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp && pnpm publish",
+    "release:check": "run-s lint typecheck clean build",
+    "release:publish": "bumpp && pnpm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "std-env": "^3.4.3"
+  },
+  "devDependencies": {
+    "@ntnyq/eslint-config": "^1.13.0",
+    "@ntnyq/prettier-config": "^1.13.0",
+    "@types/node": "^20.5.8",
+    "@vitest/coverage-v8": "^0.34.3",
+    "bumpp": "^9.2.0",
+    "eslint": "^8.48.0",
+    "husky": "^8.0.3",
+    "nano-staged": "^0.8.0",
+    "npm-run-all": "^4.1.5",
+    "pnpm": "^8.7.1",
+    "prettier": "^3.0.3",
+    "tsx": "^3.12.8",
+    "typescript": "^5.2.2",
+    "unbuild": "2.0.0",
+    "vitest": "^0.34.3"
+  },
+  "engines": {
+    "node": ">=16.14.0"
+  },
+  "prettier": "@ntnyq/prettier-config",
+  "nano-staged": {
+    "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "eslint --fix"
+  }
+}

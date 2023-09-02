@@ -1,0 +1,19 @@
+{
+  "prettier.enable": true,
+  "editor.formatOnSave": true,
+  "eslint.validate": [
+    "vue",
+    "yaml",
+    "html",
+    "json",
+    "jsonc",
+    "json5",
+    "markdown",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
+  "cSpell.words": ["antfu", "bumpp", "changelogithub", "CODECOV", "lcov", "pnpm", "vite", "vitest"],
+  "cSpell.allowCompoundWords": true
+}
