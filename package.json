@@ -46,8 +46,8 @@
     "lint": "eslint .",
     "prepare": "husky install",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp && pnpm publish",
-    "release:check": "run-s lint typecheck clean build",
+    "release": "run-s release:check release:publish",
+    "release:check": "run-s lint typecheck test",
     "release:publish": "bumpp && pnpm publish",
     "test": "vitest",
     "typecheck": "tsc --noEmit"

@@ -15,7 +15,7 @@ Check if running in an editor.
 import { isInEditor } from 'is-in-editor'
 
 isInEditor()
-//=> true if running in Editor
+//=> true if running in an Editor
 ```
 */
 export function isInEditor() {

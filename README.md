@@ -28,7 +28,7 @@ pnpm add is-in-editor
 import { isInEditor } from 'is-in-editor'
 
 isInEditor()
-// => true if running in editor
+// => true if running in an editor
 ```
 
 ## Supported Editors and IDEs
