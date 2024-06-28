@@ -2,6 +2,18 @@ import { isCI } from 'std-env'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { isInEditor } from '../src'
 
+const ENVS = [
+  // VSCode
+  'VSCODE_PID',
+  'VSCODE_CWD',
+
+  // Vim
+  'VIM',
+
+  // JetBrains IDE
+  'JETBRAINS_IDE',
+]
+
 describe('is-in-editor', () => {
   beforeEach(() => {
     vi.unstubAllEnvs()
@@ -11,15 +23,11 @@ describe('is-in-editor', () => {
     expect(isInEditor()).toBeFalsy()
   })
 
-  it.skipIf(isCI)('should pass when env VSCODE_PID is set', () => {
-    vi.stubEnv('VSCODE_PID', '1')
+  ENVS.forEach(env => {
+    it.skipIf(isCI)(`should pass when env ${env} is set`, () => {
+      vi.stubEnv(env, '1')
 
-    expect(isInEditor()).toBeTruthy()
-  })
-
-  it.skipIf(isCI)('should pass when env JETBRAINS_IDE is set', () => {
-    vi.stubEnv('JETBRAINS_IDE', '1')
-
-    expect(isInEditor()).toBeTruthy()
+      expect(isInEditor()).toBeTruthy()
+    })
   })
 })

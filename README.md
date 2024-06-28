@@ -35,6 +35,7 @@ isInEditor()
 
 - VSCode
 - JetBrains IDE
+- Vim
 
 ## Credits
 

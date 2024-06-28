@@ -19,5 +19,11 @@ function toBoolean(val: boolean | string | undefined) {
  * ```
  */
 export function isInEditor() {
-  return (toBoolean(env.VSCODE_PID) || toBoolean(env.JETBRAINS_IDE)) && !isCI
+  return (
+    (toBoolean(env.VSCODE_PID) ||
+      toBoolean(env.VSCODE_CWD) ||
+      toBoolean(env.JETBRAINS_IDE) ||
+      toBoolean(env.VIM)) &&
+    !isCI
+  )
 }
