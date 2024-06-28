@@ -1,5 +1,6 @@
 {
   "name": "is-in-editor",
+  "type": "module",
   "version": "0.0.1",
   "packageManager": "pnpm@9.4.0",
   "description": "Check if running in an editor",
@@ -32,7 +33,7 @@
       }
     }
   },
-  "main": "./dist/index.cjs",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
