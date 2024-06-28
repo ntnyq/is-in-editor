@@ -8,16 +8,16 @@ function toBoolean(val: boolean | string | undefined) {
 }
 
 /**
-Check if running in an editor.
-
-@example
-```
-import { isInEditor } from 'is-in-editor'
-
-isInEditor()
-//=> true if running in an Editor
-```
-*/
+ * Check if running in an editor.
+ *
+ * @example
+ * ```
+ * import { isInEditor } from 'is-in-editor'
+ *
+ * isInEditor()
+ * //=> true if running in an Editor
+ * ```
+ */
 export function isInEditor() {
   return (toBoolean(env.VSCODE_PID) || toBoolean(env.JETBRAINS_IDE)) && !isCI
 }

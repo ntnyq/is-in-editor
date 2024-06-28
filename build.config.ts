@@ -1,3 +1,7 @@
+/**
+ * @file UnBuild config
+ */
+
 import { defineBuildConfig } from 'unbuild'
 
 export default defineBuildConfig({
