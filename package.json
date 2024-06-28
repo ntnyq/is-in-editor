@@ -72,9 +72,6 @@
     "unbuild": "2.0.0",
     "vitest": "^1.6.0"
   },
-  "engines": {
-    "node": ">=16.14.0"
-  },
   "prettier": "@ntnyq/prettier-config",
   "nano-staged": {
     "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "eslint --fix"
