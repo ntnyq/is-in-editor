@@ -21,15 +21,21 @@ describe('is-in-editor', () => {
     vi.unstubAllEnvs()
   })
 
-  it('should not pass when in CI', () => {
-    expect(isInEditor()).toBeFalsy()
+  it('should return false since it is not run in editor', () => {
+    expect(isInEditor()).toBe(false)
+  })
+
+  it('should return false when env CI is set', () => {
+    vi.stubEnv('CI', '1')
+
+    expect(isInEditor()).toBe(false)
   })
 
   ENVS.forEach(env => {
-    it.skipIf(isCI)(`should pass when env ${env} is set`, () => {
+    it.skipIf(isCI)(`should return true when env ${env} is set`, () => {
       vi.stubEnv(env, '1')
 
-      expect(isInEditor()).toBeTruthy()
+      expect(isInEditor()).toBe(true)
     })
   })
 })
