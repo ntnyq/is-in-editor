@@ -9,6 +9,8 @@ const ENVS = [
 
   // Vim
   'VIM',
+  // NeoVim
+  'NVIM',
 
   // JetBrains IDE
   'JETBRAINS_IDE',

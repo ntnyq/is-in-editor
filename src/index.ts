@@ -23,7 +23,8 @@ export function isInEditor() {
     (toBoolean(env.VSCODE_PID) ||
       toBoolean(env.VSCODE_CWD) ||
       toBoolean(env.JETBRAINS_IDE) ||
-      toBoolean(env.VIM)) &&
+      toBoolean(env.VIM) ||
+      toBoolean(env.NVIM)) &&
     !isCI
   )
 }

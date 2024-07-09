@@ -36,6 +36,7 @@ isInEditor()
 - VSCode
 - JetBrains IDE
 - Vim
+- NeoVim
 
 ## Credits
 

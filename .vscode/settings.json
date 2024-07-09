@@ -20,6 +20,7 @@
     "changelogithub",
     "CODECOV",
     "lcov",
+    "nvim",
     "pnpm",
     "unstub",
     "vite",
