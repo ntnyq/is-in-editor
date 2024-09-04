@@ -60,7 +60,7 @@
     "@ntnyq/eslint-config": "^2.8.2",
     "@ntnyq/prettier-config": "^1.21.2",
     "@types/node": "^20.16.3",
-    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/coverage-v8": "^2.0.5",
     "bumpp": "^9.5.2",
     "eslint": "^9.9.1",
     "husky": "^9.1.5",
@@ -71,7 +71,7 @@
     "tsx": "^4.19.0",
     "typescript": "^5.5.4",
     "unbuild": "2.0.0",
-    "vitest": "^1.6.0"
+    "vitest": "^2.0.5"
   },
   "prettier": "@ntnyq/prettier-config",
   "nano-staged": {
