@@ -18,7 +18,7 @@ function toBoolean(val: boolean | string | undefined) {
  * //=> true if running in an Editor
  * ```
  */
-export function isInEditor() {
+export function isInEditor(): boolean {
   return (
     (toBoolean(env.VSCODE_PID) ||
       toBoolean(env.VSCODE_CWD) ||
