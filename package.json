@@ -59,10 +59,10 @@
   "devDependencies": {
     "@ntnyq/eslint-config": "^2.8.2",
     "@ntnyq/prettier-config": "^1.21.2",
-    "@types/node": "^20.16.4",
+    "@types/node": "^20.16.5",
     "@vitest/coverage-v8": "^2.0.5",
     "bumpp": "^9.5.2",
-    "eslint": "^9.9.1",
+    "eslint": "^9.10.0",
     "husky": "^9.1.5",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^6.2.2",
