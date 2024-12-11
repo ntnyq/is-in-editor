@@ -3,8 +3,8 @@
     "target": "ES2021",
     "lib": ["DOM", "ESNext"],
     "module": "ESNext",
-    "moduleResolution": "node",
-    "types": ["node"],
+    "moduleResolution": "bundler",
+    "types": [],
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true
