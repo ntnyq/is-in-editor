@@ -3,7 +3,9 @@ import { defineConfig } from 'vitest/config'
 export default defineConfig({
   test: {
     coverage: {
-      reporter: ['lcov', 'text', 'clover', 'json'],
+      include: ['./src/**/*.ts'],
+      reporter: ['lcov', 'text'],
     },
+    reporters: ['dot'],
   },
 })

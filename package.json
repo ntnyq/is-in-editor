@@ -6,9 +6,9 @@
   "description": "Check if running in an editor",
   "keywords": [
     "check",
-    "vscode",
     "ide",
-    "jetbrains"
+    "jetbrains",
+    "vscode"
   ],
   "license": "MIT",
   "author": {
@@ -16,10 +16,10 @@
     "email": "ntnyq13@gmail.com"
   },
   "homepage": "https://github.com/ntnyq/is-in-editor#readme",
+  "repository": "ntnyq/is-in-editor",
   "bugs": {
     "url": "https://github.com/ntnyq/is-in-editor/issues"
   },
-  "repository": "ntnyq/is-in-editor",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -70,10 +70,9 @@
     "prettier": "^3.4.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
-    "unbuild": "2.0.0",
+    "unbuild": "^3.0.0-rc.11",
     "vitest": "^2.1.8"
   },
-  "prettier": "@ntnyq/prettier-config",
   "nano-staged": {
     "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "eslint --fix"
   }
