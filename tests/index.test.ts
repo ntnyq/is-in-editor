@@ -14,6 +14,15 @@ const ENVS = [
 
   // JetBrains IDE
   'JETBRAINS_IDE',
+
+  // Emacs
+  'EMACS',
+  'EASK_EMACS',
+  'ELLSP_EMACS',
+  'INSIDE_EMACS',
+
+  // Zed
+  'ZED_IMPERSONATE',
 ]
 
 describe('is-in-editor', () => {

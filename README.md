@@ -33,10 +33,12 @@ isInEditor()
 
 ## Supported Editors and IDEs
 
-- VSCode
-- JetBrains IDE
-- Vim
-- NeoVim
+- [Emacs](https://www.gnu.org/software/emacs/)
+- [JetBrains IDE](https://www.jetbrains.com/)
+- [NeoVim](https://neovim.io/)
+- [Vim](https://www.vim.org/)
+- [VSCode](https://code.visualstudio.com/)
+- [Zed](https://zed.dev/)
 
 ## Credits
 

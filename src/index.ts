@@ -19,12 +19,17 @@ function toBoolean(val: boolean | string | undefined) {
  * ```
  */
 export function isInEditor(): boolean {
+  if (isCI) return false
   return (
-    (toBoolean(env.VSCODE_PID) ||
-      toBoolean(env.VSCODE_CWD) ||
-      toBoolean(env.JETBRAINS_IDE) ||
-      toBoolean(env.VIM) ||
-      toBoolean(env.NVIM)) &&
-    !isCI
+    toBoolean(env.VSCODE_PID) ||
+    toBoolean(env.VSCODE_CWD) ||
+    toBoolean(env.JETBRAINS_IDE) ||
+    toBoolean(env.VIM) ||
+    toBoolean(env.NVIM) ||
+    toBoolean(env.ZED_IMPERSONATE) ||
+    toBoolean(env.EMACS) ||
+    toBoolean(env.ELLSP_EMACS) ||
+    toBoolean(env.INSIDE_EMACS) ||
+    toBoolean(env.EASK_EMACS)
   )
 }
