@@ -1,7 +1,7 @@
 {
   "name": "is-in-editor",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "packageManager": "pnpm@9.15.3",
   "description": "Check if running in an editor",
   "keywords": [
