@@ -23,9 +23,12 @@
     "CODECOV",
     "EASK",
     "ELLSP",
+    "esbuild",
     "lcov",
     "nvim",
     "pnpm",
+    "tsdown",
+    "unrs",
     "unstub",
     "vite",
     "vitest"
