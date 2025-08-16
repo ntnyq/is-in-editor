@@ -37,6 +37,7 @@ isInEditor()
 - [NeoVim](https://neovim.io/)
 - [Vim](https://www.vim.org/)
 - [VSCode](https://code.visualstudio.com/)
+- [VSCodium](https://vscodium.com/)
 - [Zed](https://zed.dev/)
 
 ## Credits
