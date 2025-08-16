@@ -42,9 +42,8 @@
     "lint": "eslint",
     "prepare": "husky",
     "prepublishOnly": "pnpm run build",
-    "release": "run-s release:check release:version release:publish",
+    "release": "run-s release:check release:version",
     "release:check": "run-s lint typecheck test",
-    "release:publish": "pnpm publish",
     "release:version": "bumpp",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
@@ -52,14 +51,14 @@
   "devDependencies": {
     "@ntnyq/eslint-config": "^5.3.1",
     "@ntnyq/prettier-config": "^3.0.1",
-    "bumpp": "^10.2.2",
+    "bumpp": "^10.2.3",
     "eslint": "^9.33.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.6.2",
     "std-env": "^3.9.0",
-    "tsdown": "^0.14.0",
+    "tsdown": "^0.14.1",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },

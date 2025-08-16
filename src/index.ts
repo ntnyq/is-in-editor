@@ -1,13 +1,6 @@
 import { env, isCI } from 'std-env'
 
 /**
- * @see https://github.com/unjs/std-env/blob/main/src/_utils.ts
- */
-function toBoolean(val: boolean | string | undefined) {
-  return val ? val !== 'false' : false
-}
-
-/**
  * Check if running in an editor.
  *
  * @example
@@ -34,4 +27,11 @@ export function isInEditor(): boolean {
     || toBoolean(env.INSIDE_EMACS)
     || toBoolean(env.EASK_EMACS)
   )
+}
+
+/**
+ * @see https://github.com/unjs/std-env/blob/main/src/_utils.ts
+ */
+function toBoolean(val: boolean | string | undefined) {
+  return val ? val !== 'false' : false
 }
