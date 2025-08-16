@@ -26,6 +26,7 @@ export function isInEditor(): boolean {
     || toBoolean(env.ELLSP_EMACS)
     || toBoolean(env.INSIDE_EMACS)
     || toBoolean(env.EASK_EMACS)
+    || env.TERM_PROGRAM === 'vscode'
   )
 }
 
