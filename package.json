@@ -2,7 +2,7 @@
   "name": "is-in-editor",
   "type": "module",
   "version": "0.3.0",
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.18.0",
   "description": "Check if running in an editor",
   "keywords": [
     "check",
@@ -51,16 +51,16 @@
   "devDependencies": {
     "@ntnyq/eslint-config": "^5.6.0",
     "@ntnyq/prettier-config": "^3.0.1",
-    "bumpp": "^10.2.3",
-    "eslint": "^9.36.0",
+    "bumpp": "^10.3.1",
+    "eslint": "^9.37.0",
     "husky": "^9.1.7",
     "jsr": "^0.13.5",
     "nano-staged": "^0.8.0",
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.6.2",
     "std-env": "^3.9.0",
-    "tsdown": "^0.15.5",
-    "typescript": "^5.9.2",
+    "tsdown": "^0.15.6",
+    "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   },
   "nano-staged": {
