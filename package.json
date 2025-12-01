@@ -2,7 +2,7 @@
   "name": "is-in-editor",
   "type": "module",
   "version": "0.3.0",
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.23.0",
   "description": "Check if running in an editor",
   "keywords": [
     "check",
@@ -59,9 +59,9 @@
     "npm-run-all2": "^8.0.4",
     "prettier": "^3.6.2",
     "std-env": "^3.10.0",
-    "tsdown": "^0.16.5",
+    "tsdown": "^0.16.6",
     "typescript": "^5.9.3",
-    "vitest": "^4.0.10"
+    "vitest": "^4.0.13"
   },
   "nano-staged": {
     "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "eslint --fix"
