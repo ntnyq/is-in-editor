@@ -39,13 +39,13 @@ importers:
         specifier: ^3.10.0
         version: 3.10.0
       tsdown:
-        specifier: ^0.16.5
+        specifier: ^0.16.6
         version: 0.16.6(synckit@0.11.11)(typescript@5.9.3)
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
       vitest:
-        specifier: ^4.0.10
+        specifier: ^4.0.13
         version: 4.0.13(@types/debug@4.1.12)(jiti@2.6.1)(tsx@4.20.3)(yaml@2.8.1)
 
 packages:
