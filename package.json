@@ -49,10 +49,10 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^6.1.0",
+    "@ntnyq/eslint-config": "^6.1.2",
     "@ntnyq/prettier-config": "^3.0.1",
     "bumpp": "^11.0.1",
-    "eslint": "^10.2.1",
+    "eslint": "^10.3.0",
     "husky": "^9.1.7",
     "jsr": "^0.14.3",
     "nano-staged": "^1.0.2",
