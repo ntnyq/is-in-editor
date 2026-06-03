@@ -1,8 +1,6 @@
 {
   "name": "is-in-editor",
-  "type": "module",
   "version": "0.3.0",
-  "packageManager": "pnpm@10.33.4",
   "description": "Check if running in an editor",
   "keywords": [
     "check",
@@ -13,57 +11,60 @@
     "vim",
     "vscode"
   ],
+  "homepage": "https://github.com/ntnyq/is-in-editor#readme",
+  "bugs": {
+    "url": "https://github.com/ntnyq/is-in-editor/issues"
+  },
   "license": "MIT",
   "author": {
     "name": "ntnyq",
     "email": "ntnyq13@gmail.com"
   },
-  "homepage": "https://github.com/ntnyq/is-in-editor#readme",
   "repository": "ntnyq/is-in-editor",
-  "bugs": {
-    "url": "https://github.com/ntnyq/is-in-editor/issues"
-  },
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
-  },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "type": "module",
   "sideEffects": false,
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "lint": "eslint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint",
     "prepare": "husky",
     "prepublishOnly": "pnpm run build",
     "release": "run-s release:check release:version",
     "release:check": "run-s lint typecheck test",
     "release:version": "bumpp",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsgo --noEmit"
   },
   "devDependencies": {
-    "@ntnyq/eslint-config": "^6.1.5",
-    "@ntnyq/prettier-config": "^3.0.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260601.1",
     "bumpp": "^11.1.0",
-    "eslint": "^10.4.0",
     "husky": "^9.1.7",
     "jsr": "^0.14.3",
     "nano-staged": "^1.0.2",
     "npm-run-all2": "^9.0.1",
-    "prettier": "^3.8.3",
+    "oxfmt": "^0.53.0",
+    "oxlint": "^1.68.0",
     "std-env": "^4.1.0",
-    "tsdown": "^0.22.0",
-    "typescript": "^6.0.3",
-    "vitest": "^4.1.7"
+    "tsdown": "^0.22.1",
+    "vitest": "^4.1.8"
   },
   "nano-staged": {
-    "*.{js,ts,mjs,cjs,json,md,yml,yaml}": "eslint --fix"
-  }
+    "*.{js,ts,mjs,tsx}": "oxlint --fix",
+    "*": "oxfmt --no-error-on-unmatched-pattern"
+  },
+  "packageManager": "pnpm@11.5.1"
 }

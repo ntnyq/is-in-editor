@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["DOM", "ES2023"],
+    "lib": ["ES2023"],
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Bundler",
     "types": [],
     "erasableSyntaxOnly": true,
     "libReplacement": false,

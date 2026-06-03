@@ -1,7 +1,21 @@
 import { env, isCI } from 'std-env'
 
 /**
+ * Convert a value to a boolean.
+ *
+ * @param val - The value to convert.
+ * @returns The boolean representation of the value.
+ *
+ * @see https://github.com/unjs/std-env/blob/main/src/_utils.ts
+ */
+function toBoolean(val: boolean | string | undefined) {
+  return val ? val !== 'false' : false
+}
+
+/**
  * Check if running in an editor.
+ *
+ * @returns `true` if running in an Editor, otherwise `false`.
  *
  * @example
  * ```
@@ -16,23 +30,16 @@ export function isInEditor(): boolean {
     return false
   }
   return (
-    toBoolean(env.VSCODE_PID)
-    || toBoolean(env.VSCODE_CWD)
-    || toBoolean(env.JETBRAINS_IDE)
-    || toBoolean(env.VIM)
-    || toBoolean(env.NVIM)
-    || toBoolean(env.ZED_IMPERSONATE)
-    || toBoolean(env.EMACS)
-    || toBoolean(env.ELLSP_EMACS)
-    || toBoolean(env.INSIDE_EMACS)
-    || toBoolean(env.EASK_EMACS)
-    || env.TERM_PROGRAM === 'vscode'
+    toBoolean(env.VSCODE_PID) ||
+    toBoolean(env.VSCODE_CWD) ||
+    toBoolean(env.JETBRAINS_IDE) ||
+    toBoolean(env.VIM) ||
+    toBoolean(env.NVIM) ||
+    toBoolean(env.ZED_IMPERSONATE) ||
+    toBoolean(env.EMACS) ||
+    toBoolean(env.ELLSP_EMACS) ||
+    toBoolean(env.INSIDE_EMACS) ||
+    toBoolean(env.EASK_EMACS) ||
+    env.TERM_PROGRAM === 'vscode'
   )
-}
-
-/**
- * @see https://github.com/unjs/std-env/blob/main/src/_utils.ts
- */
-function toBoolean(val: boolean | string | undefined) {
-  return val ? val !== 'false' : false
 }

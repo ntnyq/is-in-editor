@@ -25,26 +25,33 @@ const ENVS = [
   'ZED_IMPERSONATE',
 ]
 
+const EXTRA_EDITOR_ENVS = ['TERM_PROGRAM']
+
+function clearEditorEnvs() {
+  for (const env of [...ENVS, ...EXTRA_EDITOR_ENVS]) {
+    vi.stubEnv(env, '')
+  }
+}
+
 describe('is-in-editor', () => {
   beforeEach(() => {
     vi.unstubAllEnvs()
+    clearEditorEnvs()
   })
 
   it('should return false since it is not run in editor', () => {
-    expect(isInEditor()).toBeFalsy()
+    expect(isInEditor()).toBe(false)
   })
 
   it('should return false when env CI is set', () => {
     vi.stubEnv('CI', '1')
 
-    expect(isInEditor()).toBeFalsy()
+    expect(isInEditor()).toBe(false)
   })
 
-  ENVS.forEach(env => {
-    it.skipIf(isCI)(`should return true when env ${env} is set`, () => {
-      vi.stubEnv(env, '1')
+  it.skipIf(isCI).each(ENVS)('should return true when env %s is set', env => {
+    vi.stubEnv(env, '1')
 
-      expect(isInEditor()).toBeTruthy()
-    })
+    expect(isInEditor()).toBe(true)
   })
 })
