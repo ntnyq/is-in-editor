@@ -43,12 +43,41 @@ describe('is-in-editor', () => {
     expect(isInEditor()).toBe(false)
   })
 
-  it('should return false when env CI is set', () => {
+  it('should return false when env CI is set', async () => {
     vi.stubEnv('CI', '1')
+    vi.resetModules()
+    const { isInEditor: isInEditorWithCI } = await import('../src')
 
-    expect(isInEditor()).toBe(false)
+    expect(isInEditorWithCI()).toBe(false)
   })
 
+  // In CI, isInEditor intentionally returns false regardless of editor envs.
+  it.skipIf(isCI)(
+    'should return true in loose mode for VSCode terminal',
+    () => {
+      vi.stubEnv('TERM_PROGRAM', 'vscode')
+
+      expect(isInEditor({ mode: 'loose' })).toBe(true)
+    },
+  )
+
+  it('should return false in strict mode for VSCode terminal', () => {
+    vi.stubEnv('TERM_PROGRAM', 'vscode')
+
+    expect(isInEditor({ mode: 'strict' })).toBe(false)
+  })
+
+  // This assertion is meaningful only outside CI due to the CI short-circuit.
+  it.skipIf(isCI)(
+    'should still return true in strict mode for non-terminal VSCode env',
+    () => {
+      vi.stubEnv('VSCODE_PID', '1')
+
+      expect(isInEditor({ mode: 'strict' })).toBe(true)
+    },
+  )
+
+  // Same as above: all positive editor detections are masked in CI.
   it.skipIf(isCI).each(ENVS)('should return true when env %s is set', env => {
     vi.stubEnv(env, '1')
 

@@ -28,7 +28,20 @@ import { isInEditor } from 'is-in-editor'
 
 isInEditor()
 // => true if running in an editor
+
+isInEditor({ mode: 'strict' })
+// => false if only running in an editor terminal
 ```
+
+### Options
+
+`isInEditor(options?)`
+
+- `mode` (`'loose' | 'strict'`, default: `'loose'`)
+
+`loose` mode treats editor-hosted terminals as in-editor.
+
+`strict` mode excludes editor-hosted terminals and only detects non-terminal editor runtime.
 
 ## Supported Editors and IDEs
 
