@@ -50,7 +50,7 @@
     "typecheck": "tsgo --noEmit"
   },
   "devDependencies": {
-    "@typescript/native-preview": "^7.0.0-dev.20260601.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260607.1",
     "bumpp": "^11.1.0",
     "husky": "^9.1.7",
     "jsr": "^0.14.3",
@@ -59,12 +59,12 @@
     "oxfmt": "^0.53.0",
     "oxlint": "^1.68.0",
     "std-env": "^4.1.0",
-    "tsdown": "^0.22.1",
+    "tsdown": "^0.22.2",
     "vitest": "^4.1.8"
   },
   "nano-staged": {
     "*.{js,ts,mjs,tsx}": "oxlint --fix",
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@11.5.1"
+  "packageManager": "pnpm@11.5.2"
 }
