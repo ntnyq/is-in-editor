@@ -59,12 +59,12 @@
     "oxfmt": "^0.59.0",
     "oxlint": "^1.74.0",
     "std-env": "^4.2.0",
-    "tsdown": "^0.22.7",
+    "tsdown": "^0.22.12",
     "vitest": "^4.1.10"
   },
   "nano-staged": {
     "*.{js,ts,mjs,tsx}": "oxlint --fix",
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@11.11.0"
+  "packageManager": "pnpm@11.15.1"
 }
