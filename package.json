@@ -51,13 +51,13 @@
   },
   "devDependencies": {
     "@typescript/native-preview": "^7.0.0-dev.20260707.2",
-    "bumpp": "^12.1.1",
+    "bumpp": "^12.2.0",
     "husky": "^9.1.7",
     "jsr": "^0.14.3",
     "nano-staged": "^1.0.2",
     "npm-run-all2": "^9.0.3",
-    "oxfmt": "^0.61.0",
-    "oxlint": "^1.76.0",
+    "oxfmt": "^0.62.0",
+    "oxlint": "^1.77.0",
     "std-env": "^4.2.0",
     "tsdown": "^0.22.14",
     "vitest": "^4.1.10"
@@ -66,5 +66,5 @@
     "*.{js,ts,mjs,tsx}": "oxlint --fix",
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@11.19.0"
+  "packageManager": "pnpm@11.21.0"
 }
