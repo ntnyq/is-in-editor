@@ -60,7 +60,7 @@
     "oxlint": "^1.80.0",
     "std-env": "^4.2.0",
     "tsdown": "^0.22.14",
-    "vitest": "^4.1.11"
+    "vitest": "^5.0.0"
   },
   "nano-staged": {
     "*.{js,ts,mjs,tsx}": "oxlint --fix",
