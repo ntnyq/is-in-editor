@@ -6,7 +6,7 @@ export default defineConfig({
     onlyBundle: ['std-env'],
   },
   dts: {
-    tsgo: true,
+    generator: 'tsgo',
   },
   entry: ['src/index.ts'],
   minify: 'dce-only',
